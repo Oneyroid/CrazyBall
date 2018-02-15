@@ -1,24 +1,24 @@
 var canvas = document.getElementById('canvas');
 var ball = canvas.getContext('2d');
-var ballRadius = 20;
-var posX = 20;
+var ballRadius = 10;
+var posX = 10;
 var speedX = 5;
-var posY = 20;
+var posY = 10;
 var speedY = 7;
 
 function drawBall() {
 	if (posY + speedY > canvas.height) {
-		speedY = -15;
+		speedY = -3;
 		ball.fillStyle = "red";
 	} else if (posX + speedX > canvas.width) {
-		speedX = -5;
+		speedX = -10;
 		ball.fillStyle = "green";
 	} else if (posY + speedY < 0) {
-		speedY = 7;
+		speedY = 15;
 		ball.fillStyle = "yellow";
 	}
 	else if (posX + speedX < 0) {
-		speedX = 5;
+		speedX = 10;
 		ball.fillStyle = "white";
 	}
 
